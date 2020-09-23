@@ -1,0 +1,141 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../Registry_Tutorial.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Registry Tutorial</title>
+<meta name=Description content=28-Jun-02>
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0003.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="4"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1032"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s4098" type="#_x0000_t202" style='position:absolute;
+  left:118.75pt;top:21.5pt;width:366.5pt;height:50.5pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#0c9 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s4099" type="#_x0000_t202" style='position:absolute;
+  left:0;top:252pt;width:685.25pt;height:257.5pt;mso-wrap-style:square;
+  v-text-anchor:top' filled="f" fillcolor="#0c9 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape>
+ <div v:shape="_x0000_s4098" class=O style='position:absolute;top:5.25%;
+ left:17.41%;width:58.8%;height:7.5%'><span style='font-size:150%'>The API You
+ Will Need</span></div>
+ <div v:shape="_x0000_s4099" class=O>
+ <div style='position:absolute;top:47.5%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>Get these API under Declares:&#13;</span></div>
+ <div style='position:absolute;top:51.25%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%;display:none'>&#13;</span></div>
+ <div style='position:absolute;top:54.75%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegQueryValueEx &lt; Gets Info from a value&#13;</span></div>
+ <div style='position:absolute;top:58.25%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegCreateKey<span style="mso-spacerun: yes"> 
+ </span>&lt; Creates a Key or sub key&#13;</span></div>
+ <div style='position:absolute;top:61.75%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegSetValueEx &lt; Sets a value&#13;</span></div>
+ <div style='position:absolute;top:65.5%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegOpenKey<span style="mso-spacerun: yes">  </span>&lt;
+ Opens a key or sub key&#13;</span></div>
+ <div style='position:absolute;top:69.0%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegDeleteKey<span style="mso-spacerun: yes"> 
+ </span>&lt; Deletes a key or sub key&#13;</span></div>
+ <div style='position:absolute;top:72.5%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>RegDeleteValue<span style="mso-spacerun: yes"> 
+ </span>&lt; Deletes a value&#13;</span></div>
+ <div style='position:absolute;top:76.0%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%;display:none'>&#13;</span></div>
+ <div style='position:absolute;top:79.75%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>Get these CONSTS under Constants: (A constant is an
+ unchanging variable in VB)&#13;</span></div>
+ <div style='position:absolute;top:83.25%;left:.93%;width:93.25%;height:3.5%'><span
+ style='font-size:67%'>REG_SZ&#13;</span></div>
+ <span style='position:absolute;top:86.75%;left:.93%;width:99.06%'><span
+ style='font-size:67%'>HKEY_LOCAL_MACHINE ( For our purposes, once copied to
+ the vb window, rename this </span></span><span style='position:absolute;
+ top:90.25%;left:.93%;width:93.25%'><span style='font-size:67%'>LOCALMACHINE,
+ but DONT change the value!)</span></span></div>
+ <v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75"
+  o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+  <v:stroke joinstyle="miter"/>
+  <v:formulas>
+   <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+   <v:f eqn="sum @0 1 0"/>
+   <v:f eqn="sum 0 0 @1"/>
+   <v:f eqn="prod @2 1 2"/>
+   <v:f eqn="prod @3 21600 pixelWidth"/>
+   <v:f eqn="prod @3 21600 pixelHeight"/>
+   <v:f eqn="sum @0 0 1"/>
+   <v:f eqn="prod @6 1 2"/>
+   <v:f eqn="prod @7 21600 pixelWidth"/>
+   <v:f eqn="sum @8 21600 0"/>
+   <v:f eqn="prod @7 21600 pixelHeight"/>
+   <v:f eqn="sum @10 21600 0"/>
+  </v:formulas>
+  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+  <o:lock v:ext="edit" aspectratio="t"/>
+ </v:shapetype><v:shape id="_x0000_s4103" type="#_x0000_t75" style='position:absolute;
+  left:294pt;top:78pt;width:392.625pt;height:338.25pt'>
+  <v:imagedata src="slide0003_image011.jpg" o:title="slide0003_image011"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="_x0000_s4103"
+ src="slide0003_image011.jpg" style='position:absolute;top:14.5%;left:40.82%;
+ width:54.49%;height:62.5%'><![endif]></p:slide></div>
+
+</body>
+
+</html>
