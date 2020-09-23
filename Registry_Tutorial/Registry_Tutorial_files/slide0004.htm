@@ -1,0 +1,142 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 9">
+<link id=Main-File rel=Main-File href="../Registry_Tutorial.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>Registry Tutorial</title>
+<meta name=Description content=28-Jun-02>
+<link rel=Stylesheet href="master03_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:107% !important;}
+-->
+</style>
+<script src=script.js></script><script><!--
+gId="slide0004.htm"
+if( !IsNts() ) Redirect( "PPTSld", gId );
+//-->
+</script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><script for=window event=onload><!--
+if( !IsSldOrNts() ) return;
+if( MakeNotesVis() ) return;
+LoadSld( gId );
+MakeSldVis(0);
+//-->
+</script><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="5"/>
+</o:shapelayout>
+</head>
+
+<body lang=EN-US style='margin:0px;background-color:black'
+onclick="DocumentOnClick()" onresize="_RSW()" onkeypress="_KPH()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:534px;height:400px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#FFFFFF,#000000,#808080,#000000,#00CC99,#3333CC,#CCCCFF,#B2B2B2"
+ masterhref="master03.xml">
+ <p:shaperange href="master03.xml#_x0000_s1032"/><![if !ppt]><p:shaperange
+  href="master03.xml#_x0000_s1028"/><p:shaperange
+  href="master03.xml#_x0000_s1029"/><![endif]><v:shapetype id="_x0000_t202"
+  coordsize="21600,21600" o:spt="202" path="m0,0l0,21600,21600,21600,21600,0xe">
+  <v:stroke joinstyle="miter"/>
+  <v:path gradientshapeok="t" o:connecttype="rect"/>
+ </v:shapetype><v:shape id="_x0000_s5122" type="#_x0000_t202" style='position:absolute;
+  left:198pt;top:15.5pt;width:269.5pt;height:50.5pt;mso-wrap-style:none;
+  v-text-anchor:top-baseline' filled="f" fillcolor="#0c9 [4]" stroked="f"
+  strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape><v:shape id="_x0000_s5123" type="#_x0000_t202" style='position:absolute;
+  left:16.75pt;top:78pt;width:679.25pt;height:430.75pt;mso-wrap-style:square;
+  v-text-anchor:top' filled="f" fillcolor="#0c9 [4]" stroked="f" strokecolor="black [1]">
+  <v:fill color2="white [0]"/>
+  <v:shadow color="gray [2]"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+ </v:shape>
+ <div v:shape="_x0000_s5122" class=O style='position:absolute;top:4.0%;
+ left:28.46%;width:42.69%;height:7.5%'><span style='font-size:150%'>What is a
+ Buffer?</span></div>
+ <div v:shape="_x0000_s5123" class=O><span style='position:absolute;top:15.25%;
+ left:3.37%;width:110.67%'><span style='font-size:67%'>A buffer is basically a
+ variable you create , yet you don't store any data in it, the API needs the
+ space to </span></span><span style='position:absolute;top:19.0%;left:3.37%;
+ width:92.5%'><span style='font-size:67%'>store the data, and then you can use
+ it. &#13;</span></span>
+ <div style='position:absolute;top:22.5%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%'>Example: &#13;</span></div>
+ <div style='position:absolute;top:26.0%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%;display:none'>&#13;</span></div>
+ <div style='position:absolute;top:29.5%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%'>Dim nBufferKey As Long<span style="mso-spacerun: yes"> 
+ </span>&lt; A Long BUffer&#13;</span></div>
+ <div style='position:absolute;top:33.25%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%'>Dim nBufferName As String &lt; A String Buffer&#13;</span></div>
+ <div style='position:absolute;top:36.75%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%'>nBufferName = Space(256) &lt; Making space for the
+ Text&#13;</span></div>
+ <span style='position:absolute;top:40.25%;left:3.37%;width:110.29%'><span
+ style='font-size:67%'>RegOpenKey LOCALMACHINE,
+ &quot;SOFTWARE\Microsoft\Windows\CurrentVersion&quot;, nBufferKey &lt; </span></span><span
+ style='position:absolute;top:43.75%;left:3.37%;width:92.5%'><span
+ style='font-size:67%'>That is the buffer for the whole key&#13;</span></span>
+ <div style='position:absolute;top:47.5%;left:3.37%;width:107.86%;height:3.5%'><span
+ style='font-size:67%'>RegQueryValueEx nBufferKey, &quot;RegisteredOwner&quot;,
+ 0, REG_SZ, nBufferName, Len(nBufferName)&#13;</span></div>
+ <div style='position:absolute;top:51.0%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%'>msgbox nbuffername &lt; That will message box the name
+ of the registered owner&#13;</span></div>
+ <div style='position:absolute;top:54.5%;left:3.37%;width:92.5%;height:3.5%'><span
+ style='font-size:67%;display:none'>&#13;</span></div>
+ <span style='position:absolute;top:58.25%;left:3.37%;width:109.17%'><span
+ style='font-size:67%'>What is going on here is you made two buffers, a long
+ (Huge Number), and a String (Text). These are </span></span><span
+ style='position:absolute;top:61.75%;left:3.37%;width:92.5%'><span
+ style='font-size:67%'>empty because you did not set any data&#13;</span></span><span
+ style='position:absolute;top:65.25%;left:3.37%;width:110.29%'><span
+ style='font-size:67%'>to them, yet do you see how they were plugged into the
+ code? That was so windows can put the data in </span></span><span
+ style='position:absolute;top:68.75%;left:3.37%;width:94.19%'><span
+ style='font-size:67%'>there for you(The API sets the info in there for you).
+ So RegOpenKey is putting the key </span></span><span style='position:absolute;
+ top:72.5%;left:3.37%;width:102.05%'><span style='font-size:67%'>&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion&quot;
+ in one Long </span></span><span style='position:absolute;top:76.0%;left:3.37%;
+ width:103.37%'><span style='font-size:67%'>variable so you can access the
+ entire key. The Space(256) is creating space for the nBufferName </span></span><span
+ style='position:absolute;top:79.5%;left:3.37%;width:109.17%'><span
+ style='font-size:67%'>variable so text can fit in there. You can set it to as
+ much space as you want, yet the LONGEST string </span></span><span
+ style='position:absolute;top:83.0%;left:3.37%;width:108.23%'><span
+ style='font-size:67%'>in the registry can not exceed 260 characters. So
+ setting it to 10000 is just a waste of space. What the </span></span><span
+ style='position:absolute;top:86.75%;left:3.37%;width:108.42%'><span
+ style='font-size:67%'>RegQueryValueEx line did was it<span
+ style="mso-spacerun: yes">  </span>retrieved the Registered Owner's name from
+ the registry and put it </span></span><span style='position:absolute;
+ top:90.25%;left:3.37%;width:92.5%'><span style='font-size:67%'>in the
+ nBufferName variable for us. </span></span></div>
+</p:slide></div>
+
+</body>
+
+</html>

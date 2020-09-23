@@ -1,0 +1,94 @@
+*** Registry Tutorial in a Nutshell ***
+
+*Author stuff
+Author Name: Jaime Muscatelli
+Author Company: J Productions
+Author Email: webmaster@jaimemuscatelli.zzn.com (Jaime141974@aol.com)
+Author Language: Visual Basic, QBasic
+Author's Version: Visual Basic 6.0 Professional
+Comment: This is great for beginners, and I recommend a book called Dan Appleman's Visual Basic Programmer's Guide to the WIN32 API.
+-------------------------------------------------------
+
+*** Getting Started ***
+Hopefully, you know what API is. It is basically how you access things outside of VB using code. An example would be to empty the recycle bin or
+delete a file. You can also access the registry, which is where your computer stores all info. To access the API list, open vb, then click Add-Ins, then Add-In Manager. Then Scroll down until you find VB API Viewer. Click Loaded, and Load on startup. Now hit OK, and go to Add-Ins again, and click the menu item called API Viewer. When it opens, go to File>Load Text FIle, and select WIN32 API. Now go to View, and hit Load Last Item(This
+will load the same list everytime it is opened.) To select an API, double click on it, and it will be entered into the TextBox. You must select the right declare type (Public, Private) as well. If it is going to be in a module, click public, anything else will be private. For our purposes, click private and insert them (copy and Paste) into the vb dec part of the code window.
+
+-------------------------------------------------------
+
+*** The API You will need***
+Get these API under Declares:
+
+RegQueryValueEx < Gets Info from a value
+RegCreateKey  < Creates a Key or sub key
+RegSetValueEx < Sets a value
+RegOpenKey  < Opens a key or sub key
+RegDeleteKey  < Deletes a key or sub key
+RegDeleteValue  < Deletes a value
+
+
+Get these CONSTS under Constants: (A constant is an unchanging variable in VB)
+REG_SZ
+HKEY_LOCAL_MACHINE ( For our purposes, once copied to the vb window, rename this LOCALMACHINE, but DONT change the value!)
+
+-------------------------------------------------------
+
+*** What is a Buffer ***
+A buffer is basically a variable you create , yet you don't store any data in it, the API needs the space to store the data, and then you can use it. 
+Example: 
+
+Dim nBufferKey As Long  < A Long BUffer
+Dim nBufferName As String < A String Buffer
+nBufferName = Space(256) < Making space for the Text
+RegOpenKey LOCALMACHINE, "SOFTWARE\Microsoft\Windows\CurrentVersion", nBufferKey < That is the buffer for the whole key
+RegQueryValueEx nBufferKey, "RegisteredOwner", 0, REG_SZ, nBufferName, Len(nBufferName)
+msgbox nbuffername < That will message box the name of the registered owner
+
+What is going on here is you made two buffers, a long (Huge Number), and a String (Text). These are empty because you did not set any data
+to them, yet do you see how they were plugged into the code? That was so windows can put the data in there for you(The API sets the info in there for you). So RegOpenKey is putting the key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion" in one Long variable so you can access the entire key. The Space(256) is creating space for the nBufferName variable so text can fit in there. You can set it to as much space as you want, yet the LONGEST string in the registry can not exceed 260 characters. So setting it to 10000 is just a waste of space. What the RegQueryValueEx line did was it  retrieved the Registered Owner's name from the registry and put it in the nBufferName variable for us. 
+
+-------------------------------------------------------
+
+*** Ok, so how access the registry? ***
+This is easy, hit the Start button, go to run. Then type regedit.
+
+-------------------------------------------------------
+
+*** Wow, this looks complicated ***
+Na, it's not.  Open regedit. You should see five list options:
+	1)HKEY_CLASSES_ROOT
+	2)HKEY_CURRENT_USER
+	3)HKEY_LOCAL_MACHINE < !!!! That is what we will use for this tutorial
+	4)HKEY_USERS
+	5)HKEY_CURRENT_CONFIG
+
+	(It isn't recommended to mess with 1,4, or 5)
+
+1) This is where the file types are saved.
+2) This is your current settings (This will change with different logins)
+3) This is your basic access to your comp's settings. This is what we want!!!!!!!!!
+4) This is nothing of importance
+5) DON'T MESS WITH THIS!
+
+Each program that uses the registry to save and store data to retrieve for later purposes. This is basically where you want to store your data if you need it after and before a program is closed or opened. Example: My media player has a start up sound, and the user has the possibility to turn that off or on during the startup of my program. The user can check off, and my program will save the boolean FALSE value to the registry, and I have coded my program to start up and look for that, and if it is FALSE, then don't, and if it is TRUE, then Play it.
+
+-------------------------------------------------------
+
+*** Famous Locations in the registry ***
+The part where data is ran every time your computer starts: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+The AIM Screen Name Storage: "HKEY_CURRENT_USER\Software\America Online\AOL Instant Messenger (TM)\CurrentVersion\Users"
+The place where VB stores the info if you use the "SaveSetting" and "DeleteSetting" functions in vb: "HKEY_CURRENT_USER\Software\VB and VBA Program Settings"
+
+------------------------------------------------------
+
+*** OK, I am ready to start ***
+Ok, open my example program and check out the code in action. It should be simple except for the Buffer confusion. The program will demonstrate how to use the registry functions. I wrote the code to create an entire program style reg access for my company (J Productions.) It will be under 
+"HKEY_LOCAL_MACHINE\SOFTWARE\JPRODUCTIONS"
+
+-------------------------------------------------------
+
+*About this Tutorial
+©2002 Jaime Muscatelli
+This will teach you just about everything you need to know about Registry Access with VB.
+You May publish this code and tutorial as long as NO alterations are made and it is FREEWARE.
+ 
